@@ -13,6 +13,8 @@ const nextConfig = withMDX({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeHighlight],
   },
+
+  output: "export",
 })
 
 export default nextConfig;
