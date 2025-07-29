@@ -15,13 +15,12 @@ export default function AboutPage() {
           className="rounded-full"
         />
 
-        <p> My Resume: </p>
         <Link
           href="../../public/cv.pdf"          // ← put your CV in public/cv.pdf
           target="_blank"
           className="text-blue-600 hover:underline"
         >
-          CV
+        CV
         </Link>
       </div>
 
@@ -36,11 +35,10 @@ export default function AboutPage() {
       {/* ——— More detail ——— */}
       <h2>Experience & Interests</h2>
       <ul>
-        <li>Compiler optimizations & static analysis in LLVM</li>
+        <li>Compiler optimizations & Static analysis</li>
         <li>Formal Verification</li>
         <li>Type Theory</li>
-        <li>Computer Arch</li>
-        <li>Kernel-level hypervisor design (AMD-v & SVM)</li>
+        <li>System Programming</li>
       </ul>
 
       <h2>Get in Touch</h2>
@@ -50,7 +48,7 @@ export default function AboutPage() {
           href="https://www.linkedin.com/in/julius-alexandre/"
           className="text-blue-600 hover:underline"
         >
-          Twitter
+         LinkedIn 
         </a>{" "}
         or open an issue in my{" "}
         <a
