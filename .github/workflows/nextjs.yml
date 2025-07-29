@@ -61,7 +61,7 @@ jobs:
         #   #
         #   # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-          generator_config_file: ./next.config.js
+          generator_config_file: ./next.config.mjs
           # enablement: false     # ← stops it from modifying your config
       - name: Restore cache
         uses: actions/cache@v4
@@ -80,7 +80,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: .next/static 
+          path: ./out
 
 
   # Deployment job
