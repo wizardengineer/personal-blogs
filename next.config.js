@@ -11,7 +11,7 @@ const nextConfig = withMDX({
     rehypePlugins: [rehypeHighlight],
   },
   // ← Tell Next (and the action) “yes, use static export”
-  output: "export",
+  // output: "export",
 });
 
-export default nextConfig;
+// export default nextConfig;
