@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
-// const nextConfig = {}
 // next.config.js or next.config.mjs
 import withMDX from '@next/mdx'            // MDX loader
 import remarkGfm from 'remark-gfm'          
 import rehypeHighlight from 'rehype-highlight' 
 
-export default withMDX({
+/** @type {import('next').NextConfig} */
+const nextConfig = withMDX({
   pageExtensions: ['js','jsx','ts','tsx','md','mdx'],
   extension: /\.mdx?$/,
 
@@ -15,4 +15,4 @@ export default withMDX({
   },
 })
 
-// module.exports = nextConfig
+export default nextConfig;
