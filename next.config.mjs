@@ -1,22 +1,17 @@
-// next.config.js
-import withMDX from "@next/mdx";
-import remarkGfm from "remark-gfm";
-import rehypeHighlight from "rehype-highlight";
+// next.config.cjs
+const withMDX        = require("@next/mdx")({ extension: /\.mdx?$/ });
+const remarkGfm      = require("remark-gfm");
+const rehypeHighlight = require("rehype-highlight");
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
-    output: 'export',
-   images: { unoptimized: true },
-}
+  pageExtensions: ["js","jsx","ts","tsx","md","mdx"],
+  options: {
+    remarkPlugins: [remarkGfm],
+    rehypePlugins: [rehypeHighlight],
+  },
+  output: "export",
+  images: { unoptimized: true },
+};
 
-const withMDX = nextMDX({
-    extension: /\.(md|mdx)$/,
-    options: {
-        remarkPlugins: [remarkGfm],
-        rehypePlugins: [rehypeHighlight],
-    },
-
-});
-
-export default withMDX(nextConfig);
+module.exports = withMDX(nextConfig);
