@@ -10,7 +10,7 @@ const nextConfig = withMDX({
     remarkPlugins: [remarkGfm],
     rehypePlugins: [rehypeHighlight],
   },
-  output: "export",   // ← static-export mode
+  // output: "export",   // ← static-export mode
 });
 
-module.exports = nextConfig;
+// module.exports = nextConfig;
