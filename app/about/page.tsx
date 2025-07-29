@@ -50,7 +50,7 @@ export default function AboutPage() {
         >
          LinkedIn 
         </a>{" "}
-        or open an issue in my{" "}
+        or {" "}
         <a
           href="https://github.com/wizardengineer"
           className="text-blue-600 hover:underline"

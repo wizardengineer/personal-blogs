@@ -3,7 +3,7 @@ import "./globals.css"
 import Navbar from "@/components/Navbar"
 
 export const metadata = {
-  title: "Wizard Thoughts",
+  title: "Wizard Engineer",
   description: "Julius’s blog about compilers, security, engineering & more",
   icons: {
     icon: [
