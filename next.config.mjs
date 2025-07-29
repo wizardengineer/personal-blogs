@@ -4,14 +4,18 @@ import remarkGfm from "remark-gfm";
 import rehypeHighlight from "rehype-highlight";
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withMDX({
-  pageExtensions: ["js","jsx","ts","tsx","md","mdx"],
-  options: {
-    remarkPlugins: [remarkGfm],
-    rehypePlugins: [rehypeHighlight],
-  },
-  // ← Tell Next (and the action) “yes, use static export”
-  output: "export",
+const nextConfig = {
+    pageExtensions: ['ts', 'tsx', 'js', 'jsx', 'mdx'],
+    output: 'export',
+   images: { unoptimized: true },
+}
+
+const withMDX = nextMDX({
+    extension: /\.(md|mdx)$/,
+    options: {
+        remarkPlugins: [remarkGfm],
+        rehypePlugins: [rehypeHighlight],
+    },
 });
 
-export default nextConfig;
+export default withMDX(nextConfig);
