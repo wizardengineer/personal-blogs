@@ -4,7 +4,7 @@ const remarkGfm = require("remark-gfm");
 const rehypeHighlight = require("rehype-highlight");
 
 /** @type {import('next').NextConfig} */
-const nextConfig = withMDX({
+withMDX({
   pageExtensions: ["js","jsx","ts","tsx","md","mdx"],
   options: {
     remarkPlugins: [remarkGfm],
