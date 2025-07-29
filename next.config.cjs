@@ -4,7 +4,7 @@ const remarkGfm = require("remark-gfm");
 const rehypeHighlight = require("rehype-highlight");
 
 /** @type {import('next').NextConfig} */
-withMDX({
+const nextConfig = withMDX({
   pageExtensions: ["js","jsx","ts","tsx","md","mdx"],
   options: {
     remarkPlugins: [remarkGfm],
@@ -13,4 +13,4 @@ withMDX({
   // output: "export",   // ← static-export mode
 });
 
-// module.exports = nextConfig;
+module.exports = nextConfig;
